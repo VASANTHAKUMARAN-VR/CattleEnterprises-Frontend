@@ -1,0 +1,686 @@
+/* Cow Purchase Styles */
+.cow-purchase-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cow-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cow-stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #d69e2e;
+}
+
+.cow-stat-card i {
+    font-size: 2.5rem;
+    color: #d69e2e;
+    margin-bottom: 1rem;
+}
+
+.cow-stat-card h3 {
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.cow-stat-card .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.cow-purchase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+}
+
+.cow-purchase-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #d69e2e;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.cow-purchase-card:hover {
+    transform: translateY(-5px);
+}
+
+.cow-purchase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+}
+
+.cow-purchase-header h4 {
+    color: #2d3748;
+    margin: 0;
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+.cow-quantity-badge {
+    background: #d69e2e;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+/* Cow Purchase Actions */
+.cow-purchase-actions {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cow-purchase-action-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #718096;
+    font-size: 1rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cow-purchase-action-btn.edit:hover {
+    background: #bee3f8;
+    color: #2b6cb0;
+}
+
+.cow-purchase-action-btn.delete:hover {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.cow-purchase-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cow-purchase-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+}
+
+.cow-purchase-detail-item:not(:last-child) {
+    border-bottom: 1px solid #f7fafc;
+}
+
+.cow-purchase-label {
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cow-purchase-value {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.cow-purchase-total {
+    background: linear-gradient(135deg, #d69e2e 0%, #b7791f 100%);
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 1rem;
+    border: none;
+}
+
+.cow-purchase-total .cow-purchase-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+}
+
+.cow-purchase-total .cow-purchase-value {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.empty-state h3 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.empty-state p {
+    color: #718096;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Form Styles for Cow Purchase */
+.cow-purchase-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.cow-purchase-form-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.cow-purchase-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cow-purchase-form-header h2 {
+    color: #2d3748;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #d69e2e 0%, #b7791f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cow-purchase-form-header p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+/* Form improvements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #d69e2e;
+    box-shadow: 0 0 0 3px rgba(214, 158, 46, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d69e2e 0%, #b7791f 100%);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(214, 158, 46, 0.3);
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #cbd5e0;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Message styles */
+.message {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #c6f6d5;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+}
+
+.message.error {
+    background: #fed7d7;
+    color: #742a2a;
+    border: 1px solid #feb2b2;
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: #4a5568;
+}
+
+.loading i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d69e2e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cow-purchase-section {
+        padding: 1rem;
+    }
+    
+    .cow-purchase-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cow-purchase-form-container {
+        padding: 1rem;
+    }
+    
+    .cow-purchase-form-box {
+        padding: 2rem;
+    }
+    
+    .cow-purchase-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .cow-quantity-badge {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+    
+    .cow-purchase-actions {
+        position: static;
+        align-self: flex-end;
+        margin-top: -3rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .cow-stat-card {
+        padding: 1rem;
+    }
+    
+    .cow-stat-card .value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cow-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .cow-purchase-card {
+        padding: 1rem;
+    }
+    
+    .cow-purchase-detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
+
+/* Add New Purchase Button Size Fix */
+.btn-lg {
+padding: 0.75rem 1.5rem !important;
+font-size: 0.9rem !important;
+min-width: 160px !important;
+height: auto !important;
+}
+
+/* Salesman and Place Cell Spacing Fix */
+.salesman-cell,
+.place-cell {
+display: flex !important;
+align-items: center !important;
+gap: 0.5rem !important;
+padding: 0.25rem 0 !important;
+}
+
+.salesman-cell i,
+.place-cell i {
+width: 16px !important;
+text-align: center !important;
+color: var(--primary) !important;
+font-size: 0.9rem !important;
+}
+
+/* Table Cell Specific Fixes */
+.data-table td:nth-child(2), /* Salesman column */
+.data-table td:nth-child(3) { /* Place column */
+padding: 0.75rem 0.5rem !important;
+}
+
+/* Ensure proper spacing in action buttons */
+.action-buttons {
+display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+gap: 0.5rem !important;
+padding: 0 !important;
+}
+
+/* Header button alignment fix */
+.header-content .btn-primary {
+padding: 0.75rem 1.5rem !important;
+font-size: 0.9rem !important;
+min-width: 160px !important;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+.btn-lg {
+padding: 0.6rem 1.2rem !important;
+font-size: 0.85rem !important;
+min-width: 140px !important;
+}
+
+.salesman-cell,
+.place-cell {
+    gap: 0.35rem !important;
+    font-size: 0.85rem !important;
+}
+
+.salesman-cell i,
+.place-cell i {
+    font-size: 0.8rem !important;
+    width: 14px !important;
+}
+
+/* Force proper spacing in all table cells */
+.data-table td {
+padding: 0.75rem 0.5rem !important;
+vertical-align: middle !important;
+}
+
+/* Specific fix for icon spacing */
+.fas.fa-user-tie,
+.fas.fa-map-marker-alt {
+margin-right: 0 !important;
+}  
+}
+
+
+/* Table Alignment Fix for Cow Purchase */
+.data-table {
+width: 100%;
+border-collapse: collapse;
+table-layout: fixed;
+}
+
+.data-table th,
+.data-table td {
+padding: 0.75rem 0.5rem;
+border-bottom: 1px solid var(--border);
+vertical-align: middle !important;
+text-align: center !important;
+}
+
+/* Specific column alignments */
+.data-table th:nth-child(1), /* DATE */
+.data-table td:nth-child(1) {
+text-align: left !important;
+min-width: 100px;
+width: 12%;
+}
+
+.data-table th:nth-child(2), /* SALESMAN */
+.data-table td:nth-child(2) {
+text-align: left !important;
+min-width: 120px;
+width: 18%;
+}
+
+.data-table th:nth-child(3), /* PLACE */
+.data-table td:nth-child(3) {
+text-align: left !important;
+min-width: 120px;
+width: 18%;
+}
+
+.data-table th:nth-child(4), /* QUANTITY */
+.data-table td:nth-child(4) {
+text-align: center !important;
+min-width: 80px;
+width: 10%;
+}
+
+.data-table th:nth-child(5), /* TOTAL AMOUNT */
+.data-table td:nth-child(5) {
+text-align: right !important;
+min-width: 100px;
+width: 15%;
+}
+
+.data-table th:nth-child(6), /* PRICE/COW */
+.data-table td:nth-child(6) {
+text-align: right !important;
+min-width: 90px;
+width: 12%;
+}
+
+.data-table th:nth-child(7), /* ACTIONS */
+.data-table td:nth-child(7) {
+text-align: center !important;
+min-width: 80px;
+width: 15%;
+}
+
+/* Date cell alignment fix */
+.date-cell {
+display: flex !important;
+flex-direction: column !important;
+align-items: flex-start !important;
+gap: 0.1rem !important;
+}
+
+.date-main {
+font-weight: 600;
+color: var(--dark);
+font-size: 0.9rem;
+}
+
+.date-year {
+font-size: 0.75rem;
+color: var(--gray);
+}
+
+/* Salesman and Place cell alignment */
+.salesman-cell,
+.place-cell {
+display: flex !important;
+align-items: center !important;
+gap: 0.4rem !important;
+justify-content: flex-start !important;
+text-align: left !important;
+}
+
+.salesman-cell i,
+.place-cell i {
+width: 14px !important;
+text-align: center !important;
+color: var(--primary) !important;
+font-size: 0.8rem !important;
+flex-shrink: 0;
+}
+
+/* Number cells alignment */
+.number-cell {
+text-align: center !important;
+font-variant-numeric: tabular-nums;
+font-weight: 600;
+}
+
+.quantity-badge {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background: var(--primary);
+color: white;
+padding: 0.25rem 0.5rem;
+border-radius: 12px;
+font-size: 0.8rem;
+font-weight: 600;
+min-width: 30px;
+}
+
+/* Amount cells alignment */
+.amount-cell {
+text-align: right !important;
+font-variant-numeric: tabular-nums;
+font-weight: 600;
+color: var(--primary);
+font-size: 0.9rem;
+}
+
+/* Action buttons alignment */
+.action-buttons {
+display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+gap: 0.3rem !important;
+}
+
+.btn-action {
+display: inline-flex !important;
+align-items: center !important;
+justify-content: center !important;
+width: 32px !important;
+height: 32px !important;
+border: none !important;
+border-radius: 6px !important;
+cursor: pointer !important;
+font-size: 0.8rem !important;
+}
+
+/* Table header alignment */
+.data-table th {
+background: var(--light);
+font-weight: 600;
+color: var(--dark);
+font-size: 0.8rem;
+text-transform: uppercase;
+letter-spacing: 0.3px;
+text-align: center;
+padding: 0.75rem 0.5rem;
+}
+
+/* Ensure consistent row height */
+.data-table tr {
+height: 60px;
+}
+
+/* Currency formatting */
+.amount-cell::before {
+content: "₹";
+margin-right: 2px;
+font-size: 0.8em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+.data-table th,
+.data-table td {
+padding: 0.5rem 0.25rem;
+font-size: 0.75rem;
+}   
+}
+

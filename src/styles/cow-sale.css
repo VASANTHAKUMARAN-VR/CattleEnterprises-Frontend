@@ -1,0 +1,420 @@
+/* Cow Sale Styles */
+.cow-sale-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cow-sale-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cow-sale-stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #38a169;
+}
+
+.cow-sale-stat-card i {
+    font-size: 2.5rem;
+    color: #38a169;
+    margin-bottom: 1rem;
+}
+
+.cow-sale-stat-card h3 {
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.cow-sale-stat-card .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.cow-sale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+}
+
+.cow-sale-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #38a169;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.cow-sale-card:hover {
+    transform: translateY(-5px);
+}
+
+.cow-sale-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+}
+
+.cow-sale-header h4 {
+    color: #2d3748;
+    margin: 0;
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+.cow-sale-quantity-badge {
+    background: #38a169;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+/* Cow Sale Actions */
+.cow-sale-actions {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cow-sale-action-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #718096;
+    font-size: 1rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cow-sale-action-btn.edit:hover {
+    background: #bee3f8;
+    color: #2b6cb0;
+}
+
+.cow-sale-action-btn.delete:hover {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.cow-sale-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cow-sale-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+}
+
+.cow-sale-detail-item:not(:last-child) {
+    border-bottom: 1px solid #f7fafc;
+}
+
+.cow-sale-label {
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cow-sale-value {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.cow-sale-total {
+    background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 1rem;
+    border: none;
+}
+
+.cow-sale-total .cow-sale-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+}
+
+.cow-sale-total .cow-sale-value {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.empty-state h3 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.empty-state p {
+    color: #718096;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Form Styles for Cow Sale */
+.cow-sale-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.cow-sale-form-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.cow-sale-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cow-sale-form-header h2 {
+    color: #2d3748;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cow-sale-form-header p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+/* Form improvements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #38a169;
+    box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(56, 161, 105, 0.3);
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #cbd5e0;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Message styles */
+.message {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #c6f6d5;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+}
+
+.message.error {
+    background: #fed7d7;
+    color: #742a2a;
+    border: 1px solid #feb2b2;
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: #4a5568;
+}
+
+.loading i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #38a169;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cow-sale-section {
+        padding: 1rem;
+    }
+    
+    .cow-sale-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cow-sale-form-container {
+        padding: 1rem;
+    }
+    
+    .cow-sale-form-box {
+        padding: 2rem;
+    }
+    
+    .cow-sale-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .cow-sale-quantity-badge {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+    
+    .cow-sale-actions {
+        position: static;
+        align-self: flex-end;
+        margin-top: -3rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .cow-sale-stat-card {
+        padding: 1rem;
+    }
+    
+    .cow-sale-stat-card .value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cow-sale-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .cow-sale-card {
+        padding: 1rem;
+    }
+    
+    .cow-sale-detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
+

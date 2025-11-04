@@ -1,0 +1,540 @@
+/* Campusram Style Dashboard CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ecf0f5;
+}
+
+/* Main Container */
+.campusram-container {
+    display: flex;
+    min-height: 100vh;
+    background: #ecf0f5;
+}
+
+/* Sidebar Styles */
+.campusram-sidebar {
+    width: 230px;
+    background: #2c3e50;
+    color: white;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.campusram-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.campusram-sidebar::-webkit-scrollbar-track {
+    background: #34495e;
+}
+
+.campusram-sidebar::-webkit-scrollbar-thumb {
+    background: #4a9fc7;
+    border-radius: 10px;
+}
+
+.sidebar-brand {
+    padding: 20px;
+    text-align: center;
+    background: #1a252f;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4a9fc7;
+}
+
+/* Sidebar User Profile */
+.sidebar-user-profile {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar-large {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    border: 3px solid #4a9fc7;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #34495e;
+}
+
+.avatar-initials {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar-user-profile h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.sidebar-user-profile p {
+    font-size: 0.85rem;
+    color: #95a5a6;
+}
+
+/* Sidebar Search */
+.sidebar-search {
+    padding: 15px;
+    position: relative;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    background: #34495e;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.sidebar-search input::placeholder {
+    color: #95a5a6;
+}
+
+.sidebar-search i {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+}
+
+/* Sidebar Navigation Header */
+.sidebar-nav-header {
+    padding: 15px 20px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #95a5a6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.sidebar-nav li {
+    margin-bottom: 5px;
+    padding: 12px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b8c7ce;
+}
+
+.sidebar-nav li:hover {
+    background: #1a252f;
+    color: white;
+}
+
+.sidebar-nav li.active {
+    background: #1a252f;
+    color: white;
+    border-left: 3px solid #4a9fc7;
+}
+
+.sidebar-nav li i {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-nav li span {
+    font-size: 0.9rem;
+}
+
+/* Content Wrapper */
+.campusram-content-wrapper {
+    flex: 1;
+    margin-left: 230px;
+    transition: all 0.3s ease;
+}
+
+/* Top Bar */
+.campusram-top-bar {
+    background: #4a9fc7;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar-left i {
+    font-size: 1.8rem;
+}
+
+.top-bar-left h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.breadcrumb.active {
+    opacity: 1;
+    font-weight: 600;
+}
+
+.breadcrumb-separator {
+    opacity: 0.6;
+}
+
+.top-bar-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-bar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Main Content */
+.campusram-main-content {
+    padding: 30px;
+}
+
+/* Dashboard Header */
+.campusram-dashboard-header {
+    margin-bottom: 30px;
+}
+
+.campusram-dashboard-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    font-weight: 400;
+}
+
+.campusram-dashboard-header .subtitle {
+    font-size: 1rem;
+    color: #95a5a6;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+/* Dashboard Cards Grid */
+.campusram-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Individual Card Styles */
+.campusram-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campusram-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.campusram-card .card-hash {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.campusram-card .card-icon-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.campusram-card .card-icon-section i {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.campusram-card .card-content-section {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.campusram-card .card-content-section h3 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.campusram-card .card-more-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.campusram-card .card-more-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Color Variants */
+.campusram-card.blue {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.campusram-card.red {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.campusram-card.purple {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.campusram-card.orange {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.campusram-card.pink {
+    background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+}
+
+.campusram-card.teal {
+    background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+}
+
+.campusram-card.green {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.campusram-card.indigo {
+    background: linear-gradient(135deg, #3f51b5 0%, #303f9f 100%);
+}
+
+/* Back Button */
+.btn-back {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #2980b9;
+}
+
+/* Financial Summary Cards */
+.financial-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.financial-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.financial-card i {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.financial-card.income i {
+    background: #d4edda;
+    color: #27ae60;
+}
+
+.financial-card.expense i {
+    background: #f8d7da;
+    color: #e74c3c;
+}
+
+.financial-card.profit i {
+    background: #d1ecf1;
+    color: #3498db;
+}
+
+.financial-content h3 {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.financial-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Mobile button - only shows ≤1024px */
+.mobile-menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background: #2c5aa0;
+}
+
+/* Sidebar slides in on mobile */
+.campusram-sidebar {
+    transform: translateX(-100%); /* Hidden by default */
+}
+
+.campusram-sidebar.active {
+    transform: translateX(0); /* Slides in */
+}
+    .campusram-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .campusram-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .campusram-content-wrapper {
+        margin-left: 0;
+    }
+
+    .campusram-top-bar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .top-bar-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .campusram-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .financial-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .campusram-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+/* Print Styles */
+@media print {
+    .campusram-sidebar,
+    .campusram-top-bar {
+        display: none;
+    }
+
+    .campusram-content-wrapper {
+        margin-left: 0;
+    }
+}
+.fa-receipt {
+    color: #ffffff !important;
+}
+.btn-pr {
+    background: #4299e1;
+    color: rgb(255, 255, 255);
+    border: none;
+    height: 2rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fa-money-bill-wave {
+    color: #48bb78 !important;
+}
